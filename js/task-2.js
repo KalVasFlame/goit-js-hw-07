@@ -8,14 +8,20 @@ const ulRef = document.querySelector('#ingredients')
 //     ulRef.appendChild(listItem);
 //   }
 // }
-const createListItem = (ingredients) => {
-  for (let ingredient of ingredients) { 
+// const createListItem = (ingredients) => {
+//   for (let ingredient of ingredients) { 
+//     const listItem = document.createElement('li');
+//     listItem.textContent = ingredient;
+//     ulRef.appendChild(listItem);
+//   }
+// }
+const createListItem = ingredients => { 
+  ingredients.map(item => { 
     const listItem = document.createElement('li');
-    listItem.textContent = ingredient;
+    listItem.textContent = item;
     ulRef.appendChild(listItem);
-  }
+  })
 }
-
 
 createListItem(ingredients)
 

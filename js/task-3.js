@@ -17,17 +17,28 @@ const images = [
 ];
 
 const galleryRef = document.querySelector('#gallery');
+
 galleryRef.classList.add('gallery')
+
+// const createGalleryItem = images => { 
+//   for (let img of images) { 
+//     const listItemRef = document.createElement('li');
+//     listItemRef.classList.add('gallery-list')
+//     const imgRef = document.createElement('img');
+//     imgRef.url = img.url;
+//     imgRef.alt = img.alt;
+//     listItemRef.append(imgRef);
+//     galleryRef.insertBefore(listItemRef, null);
+//   }
+// }
+
 const createGalleryItem = images => { 
-  for (let img of images) { 
-    const listItemRef = document.createElement('li');
-    listItemRef.classList.add('gallery-list')
-    const imgRef = document.createElement('img');
-    imgRef.url = img.url;
-    imgRef.alt = img.alt;
-    listItemRef.append(imgRef);
-    galleryRef.insertBefore(listItemRef, null);
-  }
+  return images.map(({ url, alt }) => { 
+    return `<li class='gallery__item'>
+        <img src='${url}' alt='${alt}'>
+        </li>`
+  }).join(' ')
+
 }
 
 createGalleryItem(images)

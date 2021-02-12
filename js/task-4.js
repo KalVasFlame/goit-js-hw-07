@@ -4,15 +4,15 @@ const counterRef = document.querySelector('span');
 
 let count = 0;
 
-const countUp = () => { 
+const onIncrementButtonClick = () => { 
   count += 1;
   counterRef.innerText = count;
 }
-const countDown = () => { 
+const onDecrementButtonClick = () => { 
   count -= 1;
   counterRef.innerText = count;
   
 }
 
-decrementBtnRef.addEventListener('click', countDown)
-incrementBtnRef.addEventListener('click', countUp)
+decrementBtnRef.addEventListener('click', onDecrementButtonClick)
+incrementBtnRef.addEventListener('click', onIncrementButtonClick)

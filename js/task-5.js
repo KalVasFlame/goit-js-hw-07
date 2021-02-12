@@ -1,7 +1,8 @@
 const inputRef = document.querySelector('#name-input');
 const spanRef = document.querySelector('#name-output');
 
-inputRef.addEventListener('input', e => {
+const onInput = e => {
   spanRef.textContent = e.target.value;
-});
+ }
+inputRef.addEventListener('input', onInput);
 
