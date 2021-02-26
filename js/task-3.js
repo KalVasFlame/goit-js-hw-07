@@ -16,7 +16,7 @@ const images = [
   },
 ];
 
-
+  
 const galleryRef = document.querySelector('#gallery');
 const listItemRef = document.createElement('li');
 const imgRef = document.createElement('img');
